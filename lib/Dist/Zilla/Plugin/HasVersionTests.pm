@@ -5,7 +5,6 @@ use warnings;
 package Dist::Zilla::Plugin::HasVersionTests;
 # ABSTRACT: release tests for version numbers
 use Moose;
-use Test::HasVersion;
 extends 'Dist::Zilla::Plugin::InlineFiles';
 
 __PACKAGE__->meta->make_immutable;
