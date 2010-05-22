@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 package Dist::Zilla::Plugin::HasVersionTests;
-# ABSTRACT: release tests for version numbers
+# ABSTRACT: Release tests for version numbers
 use Moose;
 extends 'Dist::Zilla::Plugin::InlineFiles';
 
@@ -26,7 +26,7 @@ In C<dist.ini>:
 =head1 DESCRIPTION
 
 This is an extension of L<Dist::Zilla::Plugin::InlineFiles>, providing the
-following files
+following file:
 
   xt/release/has-version.t - a standard Test::HasVersion test
 
