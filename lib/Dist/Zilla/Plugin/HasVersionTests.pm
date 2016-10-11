@@ -7,6 +7,19 @@ package Dist::Zilla::Plugin::HasVersionTests;
 use Moose;
 extends 'Dist::Zilla::Plugin::InlineFiles';
 
+with 'Dist::Zilla::Role::PrereqSource';
+
+sub register_prereqs {
+    my $self = shift @_;
+
+    $self->register_prereqs(
+        { phase => 'develop' },
+        'Test::HasVersion' => 0,
+    );
+
+    return;
+}
+
 __PACKAGE__->meta->make_immutable;
 no Moose;
 1;
